@@ -8,7 +8,10 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -17,7 +20,9 @@
     "vue-stripe-elements-plus": "^0.3.2"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "node-sass": "^4.14.1",
+    "push-dir": "^0.4.1",
     "sass-loader": "^8.0.2"
   }
 }

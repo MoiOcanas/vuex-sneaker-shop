@@ -1,4 +1,10 @@
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/vuex-sneaker-shop/'
+  }
+} : {}
+
 export default {
   mode: 'universal',
   /*
@@ -29,6 +35,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
+ ...routerBase,
   plugins: [
     { src: "~/plugins/vue-js-modal", mode: "client" },
   ],
