@@ -12,12 +12,15 @@ const createStore = () => {
     getters: {
       nike: state => filter(state.sneakers, "brand", "Nike"),
       jordan: state => filter(state.sneakers, "brand", "Jordan"),
-      adidas: state => filter(state.sneakers, "brand", "adidas")
+      adidas: state => filter(state.sneakers, "brand", "adidas"),
+      yeezy: state => filter(state.sneakers, "brand", "Yeezy"),
+      sale: state => filter(state.sneakers, "sale", true),
+      allSneakers: state => state.sneakers
     },
     mutations: {
-    //   switchSale: state => {
-    //     state.sale = !state.sale
-    //   },
+      switchSale: state => {
+        state.sale = !state.sale
+      },
       addItem(state, payload) {
         state.cartTotal += 1
         state.cart.push(payload)

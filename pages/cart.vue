@@ -115,6 +115,24 @@ export default {
     }
   }
 
+  .back-button {
+    border: none;
+    color: $primary-color;
+    background: #ddb14e;
+    width: 40%;
+    text-transform: uppercase;
+    padding: 0.2rem 0.3rem;
+    margin: 1rem 0 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: "Mukta", sans-serif;
+
+    &:hover {
+      background-color: #b89038;
+    }
+  }
+
   .checkout-container {
     text-align: center;
     background-color: $primary-color;
@@ -134,24 +152,6 @@ export default {
       cursor: pointer;
       font-size: 1.1rem;
       font-family: "Mukta", sans-serif;
-      &:hover {
-        background-color: #b89038;
-      }
-    }
-
-    .back-button {
-      border: none;
-      color: $primary-color;
-      background: #ddb14e;
-      width: 40%;
-      text-transform: uppercase;
-      padding: 0.2rem 0.3rem;
-      margin: 1rem 0 0.5rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      font-size: 1.1rem;
-      font-family: "Mukta", sans-serif;
-
       &:hover {
         background-color: #b89038;
       }

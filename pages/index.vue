@@ -1,18 +1,23 @@
 <template>
   <div class="index-container">
-    asd
+    <div class="main-jumbotron">
+      
+    </div>
+    <SneakersList />
   </div>
 </template>
 
 <script>
+import SneakersList from '../components/SneakersList'
 export default {
+  components: {
+    SneakersList
+  }
 }
 </script>
 
 <style scoped>
   .index-container {
-    padding: 1rem;
-    background-color: #eee;
     width: 100%;
   }
 </style>

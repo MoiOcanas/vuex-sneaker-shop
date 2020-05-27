@@ -155,7 +155,7 @@ export default {
 
   .go-to-checkout-container {
     text-align: center;
-    margin: 0.5rem 0.5rem 1.5rem;
+    margin: 1.5rem 0.5rem;
     .go-to-checkout-button {
       border: none;
       color: #fafafa;

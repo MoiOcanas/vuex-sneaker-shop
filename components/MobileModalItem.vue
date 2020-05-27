@@ -33,34 +33,41 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/_variables.scss';
+@import '../style/_mixins.scss';
+
 .item-card-container {
+
   .item-card {
     padding: 10px;
-    background: #FAFAFA;
+    background: $primary-color;
     width: 100%;
     border-radius: 0.5rem;
     margin: 0 auto;
+
     img {
       width: 100%;
     }
-    .item-card-button-remove-container {
-        text-align: center;
-        .item-card-button-remove {
-            border: none;
-            color: #FAFAFA;
-            background: #DD4E4E;
-            width: 50%;
-            padding: 0.3rem;
-            margin: 0.5rem 0 0;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            font-size: 1.1rem;
-            font-family: "Mukta", sans-serif;
 
-            &:hover {
-                background: #C53B3B;
-            }
+    .item-card-button-remove-container {
+      text-align: center;
+
+      .item-card-button-remove {
+        border: none;
+        color: $primary-color;
+        background: #dd4e4e;
+        width: 50%;
+        padding: 0.3rem;
+        margin: 0.5rem 0 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-family: "Mukta", sans-serif;
+
+        &:hover {
+          background: #c53b3b;
         }
+      }
     }
   }
 }

@@ -1,12 +1,13 @@
 <template>
   <div class="sneaker-container">
-      <SneakerItem v-for="shoe in jordanSneakers" :shoe="shoe" :key="shoe.id"/>
+    <SneakerItem v-for="shoe in yeezySneakers" :shoe="shoe" :key="shoe.id"/>
   </div>
 </template>
 
 <script>
-import SneakerItem from '../components/SneakerItem'
 import { mapGetters } from 'vuex'
+import SneakerItem from '../components/SneakerItem'
+import SaleSwitch from '../components/SaleSwitch'
 export default {
   data() {
     return {
@@ -14,11 +15,12 @@ export default {
     };
   },
   components: {
-    SneakerItem
+    SneakerItem,
+    SaleSwitch
   },
   computed: {
-    jordanSneakers() {
-      return this.$store.getters.jordan.filter(shoe => 
+    yeezySneakers() {
+      return this.$store.getters.yeezy.filter(shoe => 
         this.$store.state.sale
           ? shoe.price < this.highprice && shoe.sale
           : shoe.price < this.highprice
@@ -34,21 +36,19 @@ export default {
 
   .sneaker-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, auto);
   }
-  
+
   @include mediaLg {
     .sneaker-container {
       grid-template-columns: repeat(3, auto);
     }
   }
-
   @include mediaMd {
     .sneaker-container {
       grid-template-columns: repeat(2, auto);
     }
   }
-
   @include mediaSm {
     .sneaker-container {
       grid-template-columns: auto;

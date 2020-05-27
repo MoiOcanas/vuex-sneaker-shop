@@ -1,41 +1,55 @@
 <template>
   <div class="sneaker-container">
-    <SneakerItem v-for="shoe in adidas" :shoe="shoe" :key="shoe.id"/>
+    <SneakerItem v-for="shoe in adidasSneakers" :shoe="shoe" :key="shoe.id"/>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import SneakerItem from '../components/SneakerItem'
+import SaleSwitch from '../components/SaleSwitch'
 export default {
+  data() {
+    return {
+      highprice: 800
+    };
+  },
   components: {
-    SneakerItem
+    SneakerItem,
+    SaleSwitch
   },
   computed: {
-    ...mapGetters([
-        'adidas'
-    ])
+    adidasSneakers() {
+      return this.$store.getters.adidas.filter(shoe => 
+        this.$store.state.sale
+          ? shoe.price < this.highprice && shoe.sale
+          : shoe.price < this.highprice
+      )
+    }
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../style/_variables.scss';
+@import '../style/_mixins.scss';
+
   .sneaker-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, auto);
   }
-  @media (min-width: 1024px) and (max-width: 1280px) {
+
+  @include mediaLg {
     .sneaker-container {
-      grid-template-columns: auto auto auto;
+      grid-template-columns: repeat(3, auto);
     }
   }
-  @media (min-width: 767px) and (max-width: 1023px) {
+  @include mediaMd {
     .sneaker-container {
-      display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: repeat(2, auto);
     }
   }
-  @media (min-width: 320px) and (max-width: 480px) {
+  @include mediaSm {
     .sneaker-container {
       grid-template-columns: auto;
     }

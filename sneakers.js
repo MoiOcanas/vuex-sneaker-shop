@@ -14,7 +14,7 @@ const sneakers = [
         price: 1199.99,
         brand: "Jordan",
         sold: 1784,
-        sale: true,
+        sale: false,
         img: "jordan-1-off-white.jpg"
     },
     {
@@ -23,7 +23,7 @@ const sneakers = [
         price: 299.99,
         brand: "Jordan",
         sold: 3581,
-        sale: true,
+        sale: false,
         img: "jordan-3-white-cement.jpg"
     },
     {
@@ -32,7 +32,7 @@ const sneakers = [
         price: 799.99,
         brand: "Jordan",
         sold: 1454,
-        sale: true,
+        sale: false,
         img: "jordan-1-cactus-jack.jpg"
     },
     {
@@ -59,7 +59,7 @@ const sneakers = [
         price: 144.99,
         brand: "Nike",
         sold: 15254,
-        sale: true,
+        sale: false,
         img: "nike-sacai-blazer.jpg"
     },
     {
@@ -86,7 +86,7 @@ const sneakers = [
         price: 244.99,
         brand: "Nike",
         sold: 2313,
-        sale: true,
+        sale: false,
         img: "nike-dunk-off-white.jpg"
     },
     {
@@ -95,7 +95,7 @@ const sneakers = [
         price: 799.99,
         brand: "Nike",
         sold: 9865,
-        sale: true,
+        sale: false,
         img: "nike-fear-of-god.jpg"
     },
     {
@@ -113,7 +113,7 @@ const sneakers = [
         price: 549.99,
         brand: "Jordan",
         sold: 8768,
-        sale: true,
+        sale: false,
         img: "jordan-5-off-white.jpg"
     },
     {
@@ -140,7 +140,7 @@ const sneakers = [
         price: 139.99,
         brand: "adidas",
         sold: 7556,
-        sale: true,
+        sale: false,
         img: "adidas-harden-pink.jpg"
     },
     {
@@ -149,7 +149,7 @@ const sneakers = [
         price: 199.99,
         brand: "adidas",
         sold: 9595,
-        sale: true,
+        sale: false,
         img: "adidas-ultra-boost-beyonce.jpg"
     },
     {
@@ -158,7 +158,7 @@ const sneakers = [
         price: 99.99,
         brand: "adidas",
         sold: 7399,
-        sale: true,
+        sale: false,
         img: "adidas-mailman-karl-malone.jpg"
     },
     {
@@ -169,6 +169,132 @@ const sneakers = [
         sold: 4349,
         sale: true,
         img: "adidas-spider-man.jpg"
+    },
+    {
+        id: 23,
+        name: "Jordan I Retro High Purple",
+        price: 249.99,
+        brand: "Jordan",
+        sold: 5449,
+        sale: false,
+        img: "jordan-1-purple.jpg"
+    },
+    {
+        id: 24,
+        name: "Jordan 3 Retro Tinker White",
+        price: 239.99,
+        brand: "Jordan",
+        sold: 14349,
+        sale: true,
+        img: "jordan-3-tinker.jpg"
+    },
+    {
+        id: 25,
+        name: "Nike SB Dunk Parra",
+        price: 199.99,
+        brand: "Nike",
+        sold: 9654,
+        sale: true,
+        img: "nike-sb-dunk-parra.jpg"
+    },
+    {
+        id: 26,
+        name: "Nike Vapormax OFF-WHITE",
+        price: 679.99,
+        brand: "Nike",
+        sold: 6629,
+        sale: false,
+        img: "nike-vapormax-of.jpg"
+    },
+    {
+        id: 27,
+        name: "adidas Harden Vol.3 Iron Man",
+        price: 79.99,
+        brand: "adidas",
+        sold: 4824,
+        sale: true,
+        img: "adidas-harden-ironman.jpg"
+    },
+    {
+        id: 28,
+        name: "adidas Streetball Black",
+        price: 49.99,
+        brand: "adidas",
+        sold: 9976,
+        sale: true,
+        img: "adidas-streetball-black.jpg"
+    },
+    {
+        id: 29,
+        name: "adidas Yeezy Vol. 2 Yeezreel",
+        price: 239.99,
+        brand: "Yeezy",
+        sold: 19109,
+        sale: false,
+        img: "yeezy-yeezreel.jpg"
+    },
+    {
+        id: 30,
+        name: "adidas Yeezy Vol. 2 Taillight",
+        price: 259.99,
+        brand: "Yeezy",
+        sold: 19023,
+        sale: true,
+        img: "yeezy-taillight.jpg"
+    },
+    {
+        id: 31,
+        name: "adidas Yeezy 700 Solid Gray",
+        price: 414.99,
+        brand: "Yeezy",
+        sold: 10629,
+        sale: false,
+        img: "yeezy-700-solid-gray.jpg"
+    },
+    {
+        id: 32,
+        name: "adidas Yeezy 700 Geode",
+        price: 314.99,
+        brand: "Yeezy",
+        sold: 8841,
+        sale: true,
+        img: "yeezy-700-geode.jpg"
+    },
+    {
+        id: 33,
+        name: "adidas Yeezy 700 Azael",
+        price: 454.99,
+        brand: "Yeezy",
+        sold: 10734,
+        sale: true,
+        img: "yeezy-700-azael.jpg"
+    },
+    {
+        id: 35,
+        name: "adidas Yeezy Static",
+        price: 319.99,
+        brand: "Yeezy",
+        sold: 16934,
+        sale: true,
+        img: "yeezy-static.jpg"
+    },
+    {
+        id: 36,
+        name: "adidas Yeezy Earth",
+        price: 379.99,
+        brand: "Yeezy",
+        sold: 8234,
+        sale: false,
+        img: "yeezy-earth.jpg"
+    },
+    {
+        id: 37,
+        name: "adidas 500 Stone",
+        price: 279.99,
+        brand: "Yeezy",
+        sold: 14954,
+        sale: false,
+        img: "yeezy-500-stone.jpg"
     },
 ];
 
