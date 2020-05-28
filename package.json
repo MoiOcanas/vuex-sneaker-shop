@@ -9,9 +9,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "deploy": "gh-pages -d dist",
     "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deployer": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.14.1",
     "push-dir": "^0.4.1",
     "sass-loader": "^8.0.2"
