@@ -5,7 +5,7 @@
         <span class="salepill" v-if="shoe.sale">Sale</span>
         <img :src="shoe.img" :alt="shoe.name" />
       </div>
-      <h3>{{ shoe.name }}</h3>
+      <h4>{{ shoe.name }}</h4>
       <p>{{ shoe.brand }}</p>
       <h2>
         <b>${{ shoe.price }}</b>
@@ -49,7 +49,7 @@ export default {
 
   .item-card {
     padding: 10px;
-    background: #FAFAFA;
+    background: $primary-color;
     width: 100%;
     border-radius: 0.5rem;
     margin: 0 auto;
@@ -65,7 +65,7 @@ export default {
         position: absolute;
         right: 10px;
         top: 10px;
-        padding: 2px 10px 4px;
+        padding: 3px 10px 4px;
         text-transform: uppercase;
         font-size: 13px;
         font-weight: 700;

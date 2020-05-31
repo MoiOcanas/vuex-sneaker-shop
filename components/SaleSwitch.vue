@@ -88,14 +88,12 @@ export default {
 
 @include mediaMd {
   .center {
-    background-color: #fff;
     margin: 0;
   }
 }
 
 @include mediaSm {
   .center {
-    background-color: #fff;
     margin: 0;
   }
 }

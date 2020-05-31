@@ -2,7 +2,6 @@
   <div class="app-container">
     <navbar />
     <div class="main-container">
-      <SideNav />
       <nuxt />
     </div>
   </div>
@@ -10,18 +9,18 @@
 
 <script>
 import Navbar from '~/components/Navbar'
-import SideNav from '~/components/SideNav'
 
 export default {
   components: {
-    Navbar,
-    SideNav
+    Navbar
   }
 }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+<style lang="scss">
+@import '../style/_variables.scss';
+@import '../style/_mixins.scss';
+
 body {
   font-family: 'Mukta', sans-serif;
 }
@@ -36,11 +35,15 @@ body {
 .main-container {
   padding-top: 1.5rem;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: auto;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 3.5rem;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@include mediaSm {
     .main-container {
+      padding-top: 0;
       grid-template-columns: auto;
     }
 }

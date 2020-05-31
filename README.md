@@ -1,22 +1,29 @@
-# vuex-sneaker-shop
+# Vuex Shop App
 
-> My kickass Nuxt.js project
+Shoes app made with Vue, Vuex and Nuxt.  This app is an emulation of an online sneakers store. It works with different plugins and elements (dynamic and static). It is not an original idea, it is my own version of something that can already be found on the net. 
 
-## Build Setup
+![vue-shop-1](https://user-images.githubusercontent.com/40370334/83364810-7f3fc280-a369-11ea-8186-b0628975dd7a.PNG)
+
+![vue-shop-3](https://user-images.githubusercontent.com/40370334/83364806-77801e00-a369-11ea-93c1-cc776cdc66e7.PNG)
+
+![vue-shop-2](https://user-images.githubusercontent.com/40370334/83364807-79e27800-a369-11ea-86ab-ece9d6d823c4.PNG)
+
+## Installation
+
+Clone the repository:
 
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+https://github.com/MoiOcanas/vuex-sneaker-shop.git
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Run: 
+
+```bash
+npm install
+```
+
+And finally run: 
+
+```bash
+npm run dev
+```

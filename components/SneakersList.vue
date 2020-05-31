@@ -1,21 +1,30 @@
 <template>
     <div class="sneaker-container">
-      <SneakerItem v-for="shoe in allSneakers" :shoe="shoe" :key="shoe.id"/>
+      <SneakerItem v-for="shoe in allAppSneakers" :shoe="shoe" :key="shoe.id"/>
     </div>
 </template>
 
 <script>
 import SneakerItem from '../components/SneakerItem'
-import { mapGetters } from 'vuex'
+
 export default {
     name: 'SneakersList',
+    data() {
+      return {
+        highprice: 1200
+      }
+    },
     components: {
       SneakerItem
     },
     computed: {
-        ...mapGetters([
-            'allSneakers'
-        ])
+      allAppSneakers() {
+        return this.$store.getters.allSneakers.filter(shoe => 
+          this.$store.state.sale
+            ? shoe.price < this.highprice && shoe.sale
+            : shoe.price < this.highprice
+        )
+      }
     }
 }
 </script>

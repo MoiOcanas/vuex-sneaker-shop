@@ -4,8 +4,8 @@
         <hr>
         <div class="about-links">
           <div class="about-links-element"><nuxt-link to="/about">About this app</nuxt-link></div>
-          <div class="about-links-element"><nuxt-link to="/about">Github</nuxt-link></div>
-          <div class="about-links-element"><nuxt-link to="/about">My page</nuxt-link></div>
+          <div class="about-links-element"><a target="_blank" href="https://github.com/MoiOcanas">Github</a></div>
+          <div class="about-links-element"><a target="_blank" href="https://moiocanas.github.io/portfolio/">My page</a></div>
         </div>
         <p>Made with love by <a href="/">Moises Ocanas</a> 2020</p>
     </div>
@@ -81,10 +81,10 @@ export default {
 
 @include mediaMd {
   .sidenav {
-    width: 100%;
-    background-color: #fff;
+    width: 96%;
     height: auto;
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
+    padding: 1rem 1.6rem;
     hr {
       display: none;
     }
@@ -100,10 +100,10 @@ export default {
 
 @include mediaSm {
   .sidenav {
-    width: 100%;
-    background-color: #fff;
+       width: 96%;
     height: auto;
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
+    padding: 1rem 1.6rem;
     hr {
       display: none;
     }

@@ -2,7 +2,7 @@
     <div class="nav-wrapper">
         <nav class="navbar">
             <nuxt-link id="app-brand" to="/">
-                <span>Home</span>
+                <span>SHOE APP</span>
             </nuxt-link>
             <div :class="buttonDisplayed ? 'menu-toggle is-active' : 'menu-toggle'"  @click="handleClick" id="mobile-menu">
                 <span class="bar"></span>
@@ -15,6 +15,8 @@
                 <li class="nav-item" @click="handleClick"><nuxt-link to="/nike">Nike</nuxt-link></li>
                 <li class="nav-item" @click="handleClick"><nuxt-link to="/adidas">Adidas</nuxt-link></li>
                 <li class="nav-item" @click="handleClick"><nuxt-link to="/yeezy">Yeezy</nuxt-link></li>
+                <li class="nav-item" id="my-site" @click="handleClick"><a target="_blank" href="https://moiocanas.github.io/portfolio/">My site</a></li>
+                <li class="nav-item" id="my-github" @click="handleClick"><a target="_blank" href="https://github.com/MoiOcanas">Github</a></li>
                 <li class="nav-item" @click="handleClick" id="cart-nav-item">
                   <div v-if="cartTotal > 0" class="cartcount">{{ cartTotal }}</div>
                   <nuxt-link to="/cart">
@@ -69,6 +71,14 @@ export default {
   display: none;
 }
 
+#my-site {
+  display: none;
+}
+
+#my-github {
+  display: none;
+}
+
 .nav-wrapper {
   width: 100%;
   position: -webkit-sticky;
@@ -91,6 +101,9 @@ export default {
 
   #app-brand {
     text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    margin-left: 10px;
   }
 
   a {
@@ -210,12 +223,16 @@ export default {
     display: block;
   }
 
+  #my-site {
+    display: block;
+  }
+
+  #my-github {
+    display: block;
+  }
+
   .navbar {
     a {
-      span {
-        display: none;
-      }
-
       i {
         font-size: 1.3em;
       }

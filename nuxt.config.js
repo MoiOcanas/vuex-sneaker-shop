@@ -20,7 +20,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: "stylesheet", type: "text/css", href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" }
+      { rel: "stylesheet", type: "text/css", href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" },
+      { rel: "stylesheet", type: "text/css", href: "https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" }
     ]
   },
   /*
@@ -37,7 +39,7 @@ export default {
   */
  ...routerBase,
   plugins: [
-    { src: "~/plugins/vue-js-modal", mode: "client" },
+    { src: "~/plugins/vue-js-modal", mode: "client" }
   ],
   /*
   ** Nuxt.js dev-modules

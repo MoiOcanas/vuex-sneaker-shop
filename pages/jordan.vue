@@ -1,12 +1,16 @@
 <template>
-  <div class="sneaker-container">
+  <div class="jordan-container">
+    <SideNav />
+    <div class="sneaker-container">
       <SneakerItem v-for="shoe in jordanSneakers" :shoe="shoe" :key="shoe.id"/>
+    </div>
   </div>
 </template>
 
 <script>
 import SneakerItem from '../components/SneakerItem'
-import { mapGetters } from 'vuex'
+import SideNav from '../components/SideNav'
+
 export default {
   data() {
     return {
@@ -14,7 +18,8 @@ export default {
     };
   },
   components: {
-    SneakerItem
+    SneakerItem,
+    SideNav
   },
   computed: {
     jordanSneakers() {
@@ -32,26 +37,41 @@ export default {
 @import '../style/_variables.scss';
 @import '../style/_mixins.scss';
 
-  .sneaker-container {
+  .jordan-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 20% 80%;
+    .sneaker-container {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+    }
   }
   
   @include mediaLg {
-    .sneaker-container {
-      grid-template-columns: repeat(3, auto);
+    .jordan-container {
+      grid-template-columns: 20% 80%;
+      .sneaker-container {
+
+        grid-template-columns: repeat(3, auto);
+      }
     }
   }
 
   @include mediaMd {
-    .sneaker-container {
-      grid-template-columns: repeat(2, auto);
+    .jordan-container {
+      grid-template-columns: auto;
+      .sneaker-container {
+
+        grid-template-columns: repeat(2, auto);
+      }
     }
   }
 
   @include mediaSm {
-    .sneaker-container {
+    .jordan-container {
       grid-template-columns: auto;
+      .sneaker-container {
+        grid-template-columns: auto;
+      }
     }
   }
 </style>

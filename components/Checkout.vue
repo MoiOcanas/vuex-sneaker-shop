@@ -19,13 +19,23 @@
             </button>
         </div>
         <div v-else>
-          <h2>Oppss... Something's wrong</h2>
+          <div v-if="status === 'failure'">
+            <h3>Oh No!</h3>
+            <p>Something went wrong!</p>
+            <button @click="clearCart">Please try again</button>
+          </div>
+
+          <div v-else class="loadcontain">
+            <h4>Please hold, we're filling up your cart with goodies</h4>
+          </div>
         </div>
     </div>
 </template>
 
 <script>
 import { Card, createToken } from 'vue-stripe-elements-plus';
+import axios from 'axios';
+
 export default {
     props: {
         total: {
@@ -51,8 +61,44 @@ export default {
     },
     methods: {
         pay() {
-            window.alert('Payed')
-        }
+          createToken().then(data => {
+            this.submitted = true;
+            console.log(data.token);
+            axios
+              .post(
+                'https://sdras-stripe.azurewebsites.net/api/charge?code=zWwbn6LLqMxuyvwbWpTFXdRxFd7a27KCRCEseL7zEqbM9ijAgj1c1w==',
+                {
+                  stripeEmail: this.stripeEmail,
+                  stripeToken: 'tok_visa',
+                  stripeAmt: this.total
+                },
+                {
+                  headers: {
+                    'Content-Type': 'application/json'
+                  }
+                }
+              )
+              .then(response => {
+                this.status = 'success';
+                this.$emit('successSubmit');
+                this.$store.commit('clearCartCount');
+
+                this.response = JSON.stringify(response, null, 2);
+                console.log(this.response);
+              })
+              .catch(error => {
+                this.status = 'failure';
+                this.response = 'Error: ' + JSON.stringify(error, null, 2);
+                console.log(this.response);
+              });
+          });
+      },
+      clearCart() {
+        this.submitted = false;
+        this.status = '';
+        this.complete = false;
+        this.response = '';
+      }
     }
 }
 </script>

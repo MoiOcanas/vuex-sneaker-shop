@@ -7,9 +7,16 @@
           <div class="cart-item" v-for="shoe in cart" :key="shoe.id">
             <img :src="shoe.img" :alt="shoe.name" />
             <div class="cart-item-content">
-              <h3>{{ shoe.name }}</h3>
-              <small>{{ shoe.brand }}</small>
-              <h4>{{ shoe.price }}</h4>
+              <div>
+                <h3>{{ shoe.name }}</h3>
+                <small>{{ shoe.brand }}</small>
+                <h4>{{ shoe.price }}</h4>
+              </div>
+              <div class="item-card-button-remove-container">
+                  <button @click="removeItem(shoe)" class="item-card-button-remove">
+                    <i class="fa fa-times" aria-hidden="true"></i> Remove
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -20,7 +27,7 @@
           </button>
           <h2>Your total is: ${{ totalPrice }}</h2>
           <h3>Total items: {{ cartTotal }}</h3>
-          <Checkout :total="cartTotal" />
+          <Checkout @successSubmit="success = true" :total="cartTotal" />
         </div>
       </div>
     </div>
@@ -53,6 +60,9 @@ export default {
     cleanCart() {
       this.$store.commit("cleanCart");
       this.$store.commit("clearCartCount");
+    },
+    removeItem(shoe) {
+      this.$store.commit("removeItem", shoe);
     }
   },
   computed: {
@@ -83,6 +93,7 @@ export default {
 
 .cart {
   width: 90%;
+  margin: 0 auto;
 
   .empty {
     text-align: center;
@@ -111,6 +122,24 @@ export default {
 
       .cart-item-content {
         padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+          .item-card-button-remove {
+          border: none;
+          color: $primary-color;
+          background: #dd4e4e;
+          padding: 0.2rem 1.5rem;
+          margin: 0.5rem 0 0.5rem;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          font-size: 1.1rem;
+          font-family: "Mukta", sans-serif;
+
+          &:hover {
+            background: #c53b3b;
+          }
+        }
       }
     }
   }
