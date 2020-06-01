@@ -90,6 +90,7 @@ export default {
 @import '../style/_mixins.scss';
 
 .mobile-modal {
+  display: none;
   .float {
     display: none;
   }
