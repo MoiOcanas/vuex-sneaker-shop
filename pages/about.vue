@@ -6,10 +6,10 @@
            It was made using the following tools:
         </p>
         <div class="brand-img-container">
-            <a href="https://vuejs.org/" target="_blank"><img class="brand-img" src="/vue.png" alt="vue"></a>
-            <a href="https://nuxtjs.org/" target="_blank"><img class="brand-img" src="/nuxt.png" alt="nuxt"></a>
-            <a href="https://stripe.com/" target="_blank"><img class="brand-img" src="/stripe.png" alt="stripe"></a>
-            <a href="https://sass-lang.com/" target="_blank"><img class="brand-img" src="/sass-logo.png" alt="sass"></a>
+            <a href="https://vuejs.org/" target="_blank"><img class="brand-img" src="vue.png" alt="vue"></a>
+            <a href="https://nuxtjs.org/" target="_blank"><img class="brand-img" src="nuxt.png" alt="nuxt"></a>
+            <a href="https://stripe.com/" target="_blank"><img class="brand-img" src="stripe.png" alt="stripe"></a>
+            <a href="https://sass-lang.com/" target="_blank"><img class="brand-img" src="sass-logo.png" alt="sass"></a>
         </div>
         <h1>About me</h1>
         <div class="about-me">
