@@ -60,6 +60,7 @@ export default {
         },
         hide () {
             this.$modal.hide('cart');
+            console.log('hiden')
         },
         cleanCart() {
             this.$store.commit("cleanCart");
@@ -88,7 +89,6 @@ export default {
 <style lang="scss" scoped>
 @import '../style/_variables.scss';
 @import '../style/_mixins.scss';
-
 
 .mobile-modal {
   .float {
