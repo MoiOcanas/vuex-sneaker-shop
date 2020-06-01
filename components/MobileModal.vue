@@ -7,10 +7,10 @@
         </button>
 
         <modal 
-		 width="'90%'"
+		     :width="'90%'"
          height="auto"
          :scrollable="true"
-		 name="cart">
+		     name="cart">
             <div @click="hide" class="close-icon">
                 <span class="bar"></span>
                 <span class="bar"></span>
