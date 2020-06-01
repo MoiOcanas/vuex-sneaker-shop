@@ -11,15 +11,15 @@
             </div>
             <ul :class="expanded ? 'nav mobile-nav no-search' : 'nav no-search'">
                 <li class="nav-item" @click="handleClick" id="home-nav-item"><nuxt-link to="/">Home</nuxt-link></li>
-                <li class="nav-item" @click="handleClick"><nuxt-link to="/jordan">Jordan</nuxt-link></li>
-                <li class="nav-item" @click="handleClick"><nuxt-link to="/nike">Nike</nuxt-link></li>
-                <li class="nav-item" @click="handleClick"><nuxt-link to="/adidas">Adidas</nuxt-link></li>
-                <li class="nav-item" @click="handleClick"><nuxt-link to="/yeezy">Yeezy</nuxt-link></li>
+                <li class="nav-item" @click="handleClick"><nuxt-link to="/vuex-sneaker-shop/jordan">Jordan</nuxt-link></li>
+                <li class="nav-item" @click="handleClick"><nuxt-link to="/vuex-sneaker-shop/nike">Nike</nuxt-link></li>
+                <li class="nav-item" @click="handleClick"><nuxt-link to="/vuex-sneaker-shop/adidas">Adidas</nuxt-link></li>
+                <li class="nav-item" @click="handleClick"><nuxt-link to="/vuex-sneaker-shop/yeezy">Yeezy</nuxt-link></li>
                 <li class="nav-item" id="my-site" @click="handleClick"><a target="_blank" href="https://moiocanas.github.io/portfolio/">My site</a></li>
                 <li class="nav-item" id="my-github" @click="handleClick"><a target="_blank" href="https://github.com/MoiOcanas">Github</a></li>
                 <li class="nav-item" @click="handleClick" id="cart-nav-item">
                   <div v-if="cartTotal > 0" class="cartcount">{{ cartTotal }}</div>
-                  <nuxt-link to="/cart">
+                  <nuxt-link to="/vuex-sneaker-shop/cart">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     Cart
                   </nuxt-link>
