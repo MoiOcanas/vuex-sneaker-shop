@@ -6,7 +6,8 @@
           Cart
         </button>
 
-        <modal 
+        <modal
+        v-if="cartTotal > 0"
 		     :width="'90%'"
          height="auto"
          :scrollable="true"
@@ -15,7 +16,7 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <div v-if="cartTotal > 0">
+            <div>
                 <h2>Your total is: ${{ totalPrice }}</h2>
                 <div class="clean-button-container">
                     <button class="clean-button" @click="cleanCart" v-if="cartTotal > 1">
@@ -31,9 +32,6 @@
                         </nuxt-link>
                     </span>
                 </div>
-            </div>
-            <div v-else>
-                <h2>Your cart is empty</h2>
             </div>
         </modal>
     </div>
@@ -92,6 +90,10 @@ export default {
 
 .mobile-modal {
   .float {
+    display: none;
+  }
+
+  .empty-container {
     display: none;
   }
 
