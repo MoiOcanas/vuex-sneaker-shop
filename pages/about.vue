@@ -13,7 +13,7 @@
         </div>
         <h1>About me</h1>
         <div class="about-me">
-            <img class="about-me-img" src="me.png" alt="me">
+            <img class="about-me-img" src="me.PNG" alt="me">
             <p>
                 For around 3 years I've worked using different technologies as frontend developer, sometimes as full stack. I love my family, my friends, my dog and this great profession.
                 I really like learning about new web development technologies, mainly javascript. I love to do demos and exercises to improve my skills. I am also interested in improving and learning about PHP, Laravel and Python. 
