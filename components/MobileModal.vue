@@ -176,6 +176,7 @@ export default {
 
 @include mediaSm {
   .mobile-modal {
+    display: block;
     h3 {
       text-align: center;
       margin-top: 1rem;
