@@ -52,7 +52,7 @@ export default {
         }
     },
     mounted() {
-       this.$modal.hide('cart');
+       this.hide();
     },
     methods: {
         show () {
@@ -89,8 +89,8 @@ export default {
 @import '../style/_variables.scss';
 @import '../style/_mixins.scss';
 
+
 .mobile-modal {
-  display: none;
   .float {
     display: none;
   }
@@ -176,7 +176,6 @@ export default {
 
 @include mediaSm {
   .mobile-modal {
-    display: block;
     h3 {
       text-align: center;
       margin-top: 1rem;
