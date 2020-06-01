@@ -51,10 +51,8 @@ export default {
             type: Number
         }
     },
-    data() {
-        return {
-
-        }
+    mounted() {
+       this.$modal.hide('cart');
     },
     methods: {
         show () {
