@@ -5,7 +5,7 @@
         <h1>adidas shoes on sales!</h1>
         <nuxt-link class="go-to-button" to="/adidas">Go to adidas</nuxt-link>
       </div>
-      <img src="/shoe-main-banner.jpg" alt="main-banner">
+      <img src="shoe-main-banner.jpg" alt="main-banner">
     </div>
     <SneakersList />
   </div>
