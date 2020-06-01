@@ -17,6 +17,7 @@
                 <li class="nav-item" @click="handleClick"><nuxt-link to="/yeezy">Yeezy</nuxt-link></li>
                 <li class="nav-item" id="my-site" @click="handleClick"><a target="_blank" href="https://moiocanas.github.io/portfolio/">My site</a></li>
                 <li class="nav-item" id="my-github" @click="handleClick"><a target="_blank" href="https://github.com/MoiOcanas">Github</a></li>
+                <li class="nav-item" id="about-app" @click="handleClick"><nuxt-link to="/about">About this app</nuxt-link></li>
                 <li class="nav-item" @click="handleClick" id="cart-nav-item">
                   <div v-if="cartTotal > 0" class="cartcount">{{ cartTotal }}</div>
                   <nuxt-link to="/cart">
@@ -76,6 +77,10 @@ export default {
 }
 
 #my-github {
+  display: none;
+}
+
+#about-app {
   display: none;
 }
 
@@ -220,6 +225,10 @@ export default {
   }
   
   #home-nav-item {
+    display: block;
+  }
+
+  #about-app {
     display: block;
   }
 

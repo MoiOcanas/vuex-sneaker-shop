@@ -202,6 +202,10 @@ export default {
         grid-template-columns: auto;
         .cart-item {
           grid-template-columns: auto;
+          .cart-item-content {
+            flex-direction: column;
+            align-items:center;
+          }
         }
       }
       .checkout-container{
