@@ -49,16 +49,12 @@ export default {
             type: Number
         }
     },
-    mounted() {
-       this.hide();
-    },
     methods: {
         show () {
             this.$modal.show('cart');
         },
         hide () {
             this.$modal.hide('cart');
-            console.log('hiden')
         },
         cleanCart() {
             this.$store.commit("cleanCart");

@@ -39,7 +39,8 @@ export default {
   */
  ...routerBase,
   plugins: [
-    { src: "~/plugins/vue-js-modal", mode: "client" }
+    { src: "~/plugins/vue-js-modal", mode: "client" },
+    { src: "~/plugins/zoom-on-hover", mode: "client" }
   ],
   /*
   ** Nuxt.js dev-modules

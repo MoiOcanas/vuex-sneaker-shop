@@ -29,22 +29,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../style/_variables.scss';
+@import '../style/_mixins.scss';
+
   .sneaker-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
   }
-  @media (min-width: 1024px) and (max-width: 1280px) {
+  @include mediaLg {
     .sneaker-container {
       grid-template-columns: auto auto auto;
     }
   }
-  @media (min-width: 767px) and (max-width: 1023px) {
+  @include mediaMd {
     .sneaker-container {
       grid-template-columns: auto auto;
     }
   }
-  @media (min-width: 320px) and (max-width: 480px) {
+  @include mediaSm {
     .sneaker-container {
       grid-template-columns: auto;
     }

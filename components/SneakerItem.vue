@@ -3,9 +3,9 @@
     <div class="item-card">
       <div class="image-container">
         <span class="salepill" v-if="shoe.sale">Sale</span>
-        <img :src="shoe.img" :alt="shoe.name" />
+         <nuxt-link :to="`/${shoe.id}`"><img :src="shoe.img" :alt="shoe.name" /></nuxt-link>
       </div>
-      <h4>{{ shoe.name }}</h4>
+      <nuxt-link :to="`/${shoe.id}`"><h4>{{ shoe.name }}</h4></nuxt-link>
       <p>{{ shoe.brand }}</p>
       <h2>
         <b>${{ shoe.price }}</b>
@@ -53,6 +53,11 @@ export default {
     width: 100%;
     border-radius: 0.5rem;
     margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+    }
 
     .image-container {
       position: relative;

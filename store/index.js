@@ -15,7 +15,9 @@ const createStore = () => {
       adidas: state => filter(state.sneakers, "brand", "adidas"),
       yeezy: state => filter(state.sneakers, "brand", "Yeezy"),
       sale: state => filter(state.sneakers, "sale", true),
-      allSneakers: state => state.sneakers
+      allSneakers: state => state.sneakers,
+      getSneaker: state => id => state.sneakers.find(shoe => shoe.id === id),
+      getSneakerBrand: state => brand => state.sneakers.filter(state.sneakers, "brand", brand)
     },
     mutations: {
       switchSale: state => {
